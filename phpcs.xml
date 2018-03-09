@@ -1,0 +1,12 @@
+<?xml version="1.0" ?>
+<ruleset name="Walimaji">
+    <description>Code linter for Walimaji</description>
+    <arg name="colors"/>
+    <arg value="p"/>
+
+    <file>application</file>
+    <file>www/index.php</file>
+
+    <rule ref="PSR2"></rule>
+    <rule ref="Generic.Arrays.DisallowLongArraySyntax"></rule>
+</ruleset>

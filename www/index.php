@@ -23,7 +23,7 @@ Zend_Loader::loadClass('Zend_Controller_Front');
 $configpath='../www/config/config.ini';
 
 //creation d'un objet a partir du fichier ini
-$config=new Zend_Config_Ini($configpath,'dev');
+$config=new Zend_Config_Ini($configpath, 'dev');
 
 
 //construction d'un objet $db permettant d'utiliser la base de donnees
@@ -37,7 +37,7 @@ $db->getConnection();
 
 //on enregistre l'objet dans un registre pour qu'il soit utiliser partout dans l'application(variable globale)
 
-Zend_Registry::set('db',$db);
+Zend_Registry::set('db', $db);
 
 //base de donnees par defaut
 
@@ -45,7 +45,7 @@ Zend_Db_Table::setDefaultAdapter($db);
 
 
 
-try{
+try {
     //getInstance() est utilise pour recuperer une instance du controleur frontal
         $front=Zend_Controller_Front::getInstance();
 
@@ -62,13 +62,9 @@ try{
     //permettant ainsi au developpeur de fournir des objets personalises.
     $front->dispatch();
     //Triate les exceptions du controlleur (generalement 404)
-
-}catch (Zend_Controller_Exception $e)
-{
-   echo  $e->getMessage();
+} catch (Zend_Controller_Exception $e) {
+    echo  $e->getMessage();
     //traite les autres exceptions du controleur
-}catch (Exception $e){
+} catch (Exception $e) {
     include 'errors/500.phtml';
 }
-
-?>

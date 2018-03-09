@@ -9,8 +9,8 @@
 
 require_once "Zend/Db/Table/Abstract.php";
 
-class  Utilisateurs extends Zend_Db_Table_Abstract
+class Users extends Zend_Db_Table_Abstract
 {
 
-    protected $_name="utilisateurs";
+    protected $_name = "users";
 }
