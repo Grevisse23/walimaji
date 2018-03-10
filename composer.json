@@ -1,0 +1,19 @@
+{
+    "name": "itotafrica/walimaji",
+    "description": "Plateforme qui optimise la chaine de valeur agroalimentaire en resolvant l\u0000asym\u0000trie d\u0000information entre ses diff\u0000rents acteurs.",
+    "type": "project",
+    "license": "GNU",
+    "authors": [
+        {
+            "name": "Bernard ng",
+            "email": "ngandubernard@gmail.com"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {
+        "zendframework/zendframework": "^3.0"
+    },
+    "requrie-dev" : {
+        "squizlabs/php_codesniffer": "^3.2"
+    }
+}
